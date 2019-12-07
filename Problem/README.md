@@ -4,6 +4,7 @@ Error : Failed to get convolution algorithm. This is probably because cuDNN fail
 
 OS : Ubuntu 16.04
 CUDA : 10.0
+tensorflow : v2.0
 
 ```
 nvcc: NVIDIA (R) Cuda compiler driver
@@ -24,3 +25,18 @@ Cudnn : 7.4.1
 #include "driver_types.h"
 ```
 
+## Solve 
+
+Cudnn Version Problem  
+
+CUDNN : 7.6.5
+
+```
+#define CUDNN_MAJOR 7
+#define CUDNN_MINOR 6
+#define CUDNN_PATCHLEVEL 5
+--
+#define CUDNN_VERSION (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)
+
+#include "driver_types.h"
+```

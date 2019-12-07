@@ -1,4 +1,4 @@
-## cudnn problem
+## cudnn problem (2~3 Day)
 
 Error : Failed to get convolution algorithm. This is probably because cuDNN failed to initialize, so try looking to see if a warning log message was printed above.
 

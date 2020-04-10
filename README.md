@@ -2,6 +2,7 @@
 100일 연속 커밋 프로젝트
 
 
-## 1 ~  Days 
+[일정](https://github.com/saitros/100days-commit-project/milestones)
 
-Go lang & Cuda Study
+
+[Reading Paper](https://github.com/mhagiwara/100-nlp-papers)

@@ -48,8 +48,6 @@ $\rightarrow$ Header의 길이가 50자를 넘지 않는 선에서, 짧은 영�
 
 요약하면 50자 이내의 요약문장과 하나의 빈 줄, 그리고 설명문으로 구성하면 좋다.
 
-
-
 다음 내용을 참고해서 작성중에 있습니다.
 * https://blog.naver.com/PostView.nhn?blogId=duswl0319&logNo=221913439523&parentCategoryNo=&categoryNo=15&viewDate=&isShowPopularPosts=true&from=search
 * https://djkeh.github.io/articles/How-to-write-a-git-commit-message-kor/

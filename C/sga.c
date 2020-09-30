@@ -98,3 +98,75 @@ void crossing(int m[], int p[], int c1[], int c2[]){
     c1[j] = p[j];
   }
 }
+
+void copypool(int pool[POOLSIZE][DATANO], int nextpool[POOLSIZE][DATANO]){
+  int i, j;
+
+  for(i = 0; i < POOLSIZE; ++i)
+    for(j = 0; j < DATANO; ++j)
+      pool[i][j] = nextpool[i][j];
+}
+
+int evalfit(int g[]){
+  int i;
+  int fitness = 0;
+
+  for(i = 0; i < DATANO; ++i)
+  fitness += g[i] * q[i];
+
+  return MAXFIT-abs(VALUE-fitness);
+}
+
+void printp(int pool[POOLSIZE][DATANO]){
+  int i, j;
+  int fintness;
+  double totalfiness = 0;
+  int elite, bestfit = 0;
+
+  for(i = 0; i < POOLSIZE; ++i){
+    for(j = 0; j < DATANO; ++j)
+      printf("%1d". pool[i][j]);
+    fitness = evalfit(pool[i]);
+    printf("\t%d\n", fitness);
+    if(fitness > bestfit){
+      bestfit = fitness;
+      elite = i;
+    }
+    totalfiness += fitness;
+  }
+  /* print elite Simple GA */
+  printf("%d\t%d   ", elite, bestfit);
+  /* print GA mean */
+  printf("%lf\n", totalfiness/POOLSIZE);
+}
+
+void initpool(int pool[POOLSIZE][DATANO]){
+  int i, j;
+
+  for(i = 0; i < POOLSIZE; ++i)
+    for(j = 0; j < DATANO; ++j)
+      pool[i][j] = rndn(2);
+}
+
+int rndn(int l){
+  int rndno;
+
+  while((rndno = ((double)rand()/RAND_MAX)*l)==l);
+
+  return rndno;
+}
+
+void mutation(int pool[POOLSIZE][DATANO]){
+  int i, j;
+
+  for(i = 0; i < POOLSIZE; ++i)
+    for(j = 0; j < DATANO; ++j)
+      if((double)rndn(100)/100.0 <= MRATE)
+
+      pool[i][j] = notval(pool[i][j]);
+}
+
+int notval(int v){
+  if(v == YES) return NO;
+  else return YES;
+}

@@ -1,5 +1,5 @@
 # Continuous commit
-매일 커밋 프로젝트 (restart )
+매일 커밋 프로젝트 (restart 3/28 ~ )
 
 
 [일정](https://github.com/saitros/100days-commit-project/milestones)
